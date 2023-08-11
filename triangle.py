@@ -1,8 +1,13 @@
 class Triangle:
     def __init__(self, a, b, c):
-        self.a = a
-        self.b = b
-        self.c = c
+        if a + b > c and a + c > b and b + c > a:
+            self.a = a
+            self.b = b
+            self.c = c
+        else:
+            raise Exception('треугольник не существует')
+
+
 
     def perimeter(self):
         return self.a + self.b + self.c
